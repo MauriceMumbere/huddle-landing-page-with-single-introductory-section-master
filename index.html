@@ -12,6 +12,9 @@
       href="./images/favicon-32x32.png"
     />
 
+    <!-- Tailwindcss cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -20,51 +23,85 @@
     <title>
       Frontend Mentor | Huddle landing page with single introductory section
     </title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      h1 {
+        font-family: "poppins", sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <img src="./images/logo.svg" alt="Logo" />
+    <header
+      class="lg:h-screen bg-violet-400 bg-[url('./images/bg-mobile.svg')] lg:bg-[url('./images/bg-desktop.svg')] px-[1.7rem] lg:px-[7rem]"
+    >
+      <nav class="pt-10">
+        <img class="w-[12rem]" src="./images/logo.svg" alt="Logo" />
       </nav>
-      <div>
-        <div>
+      <div
+        class="flex flex-col lg:flex-row space-x-[7rem] mt-15 text-white text-center lg:text-left"
+      >
+        <div class="w-full">
           <img
+            class="md:max-w-[45rem]"
             src="./images/illustration-mockups.svg"
             alt="illustration mockups"
           />
         </div>
-        <div>
-          <div>
-            <h1>Build The Community Your Fans Will Love</h1>
-            <p>
-              Huddle re-imagines the way we build communities. You have a voice,
-              but so does your audience. Create connections with your users as
-              you engage in genuine discussion.
-            </p>
-            <div>
-              <a href="#"> Register</a>
-            </div>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
+
+        <div class="mt-10">
+          <h1
+            class="text-2xl leading-[2.5rem] lg:text-4xl font-bold mb-7 lg:leading-[4rem]"
+          >
+            Build The Community Your Fans Will Love
+          </h1>
+          <p class="text-[18px]">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <div class="mt-12">
+            <a
+              class="bg-white shadow-4xl hover:bg-pink-500 hover:text-white transition duration-300 ease-in-out shadow-lg text-black py-[1rem] px-[3.5rem] rounded-full"
+              href="#"
+            >
+              Register</a
+            >
           </div>
         </div>
+      </div>
+      <!-- Social network -->
+      <div class="flex justify-center lg:justify-end mt-[7rem] lg:mt-0">
+        <ul class="flex gap-4">
+          <li>
+            <a
+              class="group flex justify-center items-center border-2 border-white hover:border-pink-500 h-[40px] w-[40px] rounded-full"
+              href="#"
+            >
+              <i
+                class="fa fa-facebook text-white group-hover:text-pink-500"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="group flex justify-center items-center border-2 border-white hover:border-pink-500 h-[40px] w-[40px] rounded-full"
+              href="#"
+            >
+              <i class="fa fa-twitter text-white group-hover:text-pink-500"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="group flex justify-center items-center border-2 border-white hover:border-pink-500 h-[40px] w-[40px] rounded-full"
+              href="#"
+            >
+              <i
+                class="fa fa-instagram text-white group-hover:text-pink-500"
+              ></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
   </body>
